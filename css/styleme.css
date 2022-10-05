@@ -27,6 +27,7 @@
   color: yellowgreen;
 }
 
+.section a:any-link,
 .section a:-webkit-any-link {
   color: red;
 }

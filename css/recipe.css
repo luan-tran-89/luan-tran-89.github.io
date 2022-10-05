@@ -8,8 +8,6 @@
   font-size: 11pt;
   font-weight: normal;
   color: #404040;
-  /* margin: auto;
-  width: 1024px; */
 }
 
 #recipe .section-title.title {
@@ -56,6 +54,7 @@
   text-decoration: underline;
 }
 
+#recipe a:any-link,
 #recipe a:-webkit-any-link {
   color: #A4A400
 }
@@ -65,7 +64,8 @@
   font-style: italic;
 }
 
-#recipe tt {
+#recipe .copy-right {
+  font-family: monospace;
   display: block;
 }
 
