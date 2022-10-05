@@ -30,6 +30,12 @@
 .section a:any-link,
 .section a:-webkit-any-link {
   color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
 }
 
 .section-separated {
@@ -106,10 +112,6 @@
   background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/exk40A1bzjc.png);
 }
 
-.photo-container {
-
-}
-
 .photo-container img {
   border-radius: 5px;
   height: 100px;
@@ -118,6 +120,26 @@
 
 .doulbe-block {
   display: flex;
+}
+
+p.drop-caps:first-letter {
+  color: #1A7FFB;
+  font-size: 24px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#about-me dl dt {
+  color: orange;
+  font-weight: bold;
+}
+
+.list-title {
+  font-weight: bold;
+}
+
+.decrementing-order-list {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 @media only screen and (max-width: 1280px) {

@@ -57,6 +57,7 @@ body {
 }
 
 .name {
+  color: #1A7FFB;
   display: block;
   font-size: 24px;
   font-weight: bold;
