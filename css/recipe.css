@@ -70,9 +70,9 @@
 }
 
 #recipe .copy-right {
-  margin: 15px 0;
-  text-align: right;
-  width: 300px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
 }
 
 #recipe  ul {
@@ -81,4 +81,8 @@
 
 #recipe .section-title {
   letter-spacing: 0.25em;
+}
+
+#recipe .validator-link {
+  text-align: right;
 }

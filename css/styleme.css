@@ -97,19 +97,19 @@
 }
 
 .icon-live {
-  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/nDxCDAeszOF.png);
+  background-image: url(../images/location-icon.png);
 }
 
 .icon-school {
-  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/w2cLH8MHQ_P.png);
+  background-image: url(../images/school-icon.png);
 }
 
 .icon-from {
-  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/k7egJAGHjmH.png);
+  background-image: url(../images/location-icon.png);
 }
 
 .icon-relationship {
-  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/exk40A1bzjc.png);
+  background-image: url(../images/love-icon.png);
 }
 
 .photo-container img {
