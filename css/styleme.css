@@ -27,15 +27,10 @@
   color: yellowgreen;
 }
 
-.section a:any-link,
-.section a:-webkit-any-link {
+.section a {
   color: red;
   font-weight: bold;
   text-decoration: none;
-}
-
-.section a:hover {
-  text-decoration: underline;
 }
 
 .section-separated {

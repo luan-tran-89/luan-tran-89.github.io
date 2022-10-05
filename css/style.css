@@ -5,6 +5,14 @@ body {
   font-family: Arial, "Arial Black", Verdana, "Trebuchet MS", Georgia, Tahoma, "Courier New", "Times New Roman";
 }
 
+body a {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
 .contain {
   background: white;
   border-top-left-radius: 10px;
@@ -151,8 +159,7 @@ body {
   text-align: center;
 }
 
-.footer .footer-links a:any-link,
-.footer .footer-links a:-webkit-any-link {
+.footer a {
   color: white;
   text-decoration: none;
 }

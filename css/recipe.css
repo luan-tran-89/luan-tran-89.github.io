@@ -54,8 +54,7 @@
   text-decoration: underline;
 }
 
-#recipe a:any-link,
-#recipe a:-webkit-any-link {
+#recipe a {
   color: #A4A400
 }
 
