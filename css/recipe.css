@@ -85,3 +85,10 @@
 #recipe .validator-link {
   text-align: right;
 }
+
+#demo h1,
+#demo h2 {
+  background-image: url(../images/background2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
