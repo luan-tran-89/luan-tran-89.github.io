@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Lucida Sans Unicode";
+  src: url("../font/Lucida_Sans_Unicode.ttf");
+}
+
+#recipe {
+  background: url("../images/silverware.jpg");
+  font-size: 11pt;
+  font-weight: normal;
+  color: #404040;
+  /* margin: auto;
+  width: 1024px; */
+}
+
+#recipe .section-title.title {
+  font-size: 22pt;
+  text-align: center;
+}
+
+#recipe .section-title {
+  border-radius: 0;
+  color: #A4A400;
+  font-size: 18pt;
+  text-decoration: underline;
+}
+
+#recipe .title span,
+#recipe .section-title span {
+  font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+  background: #F0F0F0;
+}
+
+#recipe .section li {
+  padding: 0;
+}
+
+#recipe .strong-text {
+  font-weight: bold;
+}
+
+#recipe .section-header .section-detail span {
+  display: block;
+}
+
+#recipe .section-detail {
+  margin: 10px 0;
+}
+
+#recipe .image {
+  width: 250px;
+  height: 250px;
+}
+
+#recipe abbr {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#recipe a:-webkit-any-link {
+  color: #A4A400
+}
+
+#recipe blockquote {
+  background: #FFFFA8;
+  font-style: italic;
+}
+
+#recipe tt {
+  display: block;
+}
+
+#recipe .copy-right {
+  margin: 15px 0;
+  text-align: right;
+  width: 300px;
+}
+
+#recipe  ul {
+  list-style-image: url('../images/pie_icon.gif');
+}
+
+#recipe .section-title {
+  letter-spacing: 0.25em;
+}

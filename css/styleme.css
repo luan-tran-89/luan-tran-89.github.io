@@ -1,0 +1,148 @@
+.cover-bg {
+  background-image: url("../images/bg2.jpg");
+}
+
+.title,
+.section-title {
+  background: #F0F0F0;
+  border-radius: 5px;
+  color: #1A7FFB;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+.section {
+  background: white;
+  border: 1px solid #aba9a7;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.section li {
+  padding: 5px 0;
+}
+
+.special-text {
+  color: yellowgreen;
+}
+
+.section a:-webkit-any-link {
+  color: red;
+}
+
+.section-separated {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+}
+
+.section-separated img {
+  height: 170px;
+}
+
+.section-separated span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-detail blockquote {
+  line-height: 18pt;
+}
+
+#about-me {
+  display: flex;
+}
+
+#about-me .left-side {
+  width: 390px;
+  margin-right: 10px;
+}
+
+#about-me .right-side {
+  width: calc(100% - 400px);
+}
+
+#about-me  .section:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#about-me .section-detail {
+  padding: 10px;
+}
+
+.icon-info {
+  align-items: center;
+  display: flex;
+  padding: 5px 0;
+}
+
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  height: 20px;
+  width: 25px;
+  filter: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+  -webkit-filter: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+
+.icon-live {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/nDxCDAeszOF.png);
+}
+
+.icon-school {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/w2cLH8MHQ_P.png);
+}
+
+.icon-from {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/k7egJAGHjmH.png);
+}
+
+.icon-relationship {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/exk40A1bzjc.png);
+}
+
+.photo-container {
+
+}
+
+.photo-container img {
+  border-radius: 5px;
+  height: 100px;
+  width: 32%;
+}
+
+.doulbe-block {
+  display: flex;
+}
+
+@media only screen and (max-width: 1280px) {
+  .center {
+    width: 94vw;
+  }
+
+  #about-me .left-side {
+    width: 290px;
+  }
+
+  #about-me .right-side {
+    width: calc(100% - 300px);
+  }
+
+  .avata {
+    left: 10vw;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  #about-me .left-side {
+    display: none;
+  }
+
+  #about-me .right-side {
+    width: 100%;
+  }
+}

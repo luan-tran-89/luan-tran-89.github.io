@@ -2,13 +2,12 @@ body {
   background: #edf4ff;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  line-height: 1;
+  font-family: Arial, "Arial Black", Verdana, "Trebuchet MS", Georgia, Tahoma, "Courier New", "Times New Roman";
 }
 
-.left-side, .right-side {
+/* .left-side, .right-side {
   width: 10vw;
-}
+} */
 
 .contain {
   background: white;
@@ -19,7 +18,7 @@ body {
 }
 
 .center {
-  width: 70vw;
+  width: 76vw;
   margin: auto;
 }
 
@@ -51,7 +50,7 @@ body {
   position: absolute;
   display: block;
   top: 200px;
-  left: 20vw;
+  left: 18vw;
   
 }
 
@@ -111,6 +110,7 @@ body {
   background: #3e6890;
   border-top: 1px solid #aba9a7;
   border-radius: 10px 10px 0 0;
+  color: white;
   height: 100px;
   display: flex;
   align-items: center;
@@ -145,4 +145,26 @@ body {
 .footer .separated {
   border-right: 1px solid white;
   padding: 30px 0;
+  margin-right: 10px;
+}
+
+.footer .footer-links {
+  padding: 0 10px;
+  width: 10%;
+  text-align: center;
+}
+
+.footer .footer-links a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-link {
+  display: block;
+  padding: 5px 0;
+}
+
+.footer-link-title {
+  font-weight: bold;
+  text-decoration: underline;
 }
