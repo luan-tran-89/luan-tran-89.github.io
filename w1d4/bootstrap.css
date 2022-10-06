@@ -1,0 +1,24 @@
+#header {
+  background: #ADD8E6;
+}
+
+#menu-bar,
+#footer {
+  background-color: #2F4F51;
+}
+
+#content .item {
+  min-height: 250px;
+}
+
+.item1 {
+  background-color: #AAAAAA;
+}
+
+.item2 {
+  background-color: #BBBBBB;
+}
+
+.item3 {
+  background-color: #CCCCCC;
+}
