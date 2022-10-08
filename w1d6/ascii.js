@@ -5,8 +5,7 @@ const FONT_SIZE = {
   "Large": "large",
   "Extra Large": "extra-large",
   "XXL": "xxl"
-}
-
+};
 window.onload = function(){
   "use strict";
   // put all of your code here
@@ -16,7 +15,6 @@ window.onload = function(){
   const animation = document.getElementById("animation");
   const fontSize = document.getElementById("fontsize");
   const turbo = document.getElementById("turbo");
-
   let interval = getIntervalTime();
   let animationType = animation.value;
   let myInterval = null;
@@ -83,14 +81,14 @@ window.onload = function(){
   animation.onchange = function() {
     animationType = animation.value;
     triggerChange();
-  }
+  };
 
   fontSize.onchange = function() {
     textArea.className = FONT_SIZE[fontSize.value];
-  }
+  };
 
   turbo.onchange = function() {
     interval = getIntervalTime();
     triggerChange();
-  }
-}
+  };
+};
