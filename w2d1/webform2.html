@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>W2D1 Webform2</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="page">
+      <div class="page-header">
+        <div class="header-title">
+          MUM Golden Dome Market : : : SRM System
+        </div>
+        <div class="header-menu">
+          Products
+        </div>
+        <div class="header-menu">
+          Suppliers
+        </div>
+        <div class="user-infor">
+          Hello!
+          <button type="button" class="btn btn-light">Sign Out</button>
+        </div>
+      </div>
+      <div class="page-contain">
+        <div class="title">
+          <span>New Product Form</span>
+        </div>
+        <form id="login-form">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="product">Product Number</label>
+                <input type="text" class="form-control" id="product">
+              </div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="name">Unit Price</label>
+                <input type="number" step="0.1" min="0.0" class="form-control" id="unit" placeholder="0.0">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="name">Quantity in stock</label>
+                <input type="number" min="0" class="form-control" id="quantity" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="name">Supplier:</label>
+                <select id="supplier" class="form-control">
+                  <option value="">Select a supplier</option>
+                  <option value="1">Supplier 1</option>
+                  <option value="2">Supplier 2</option>
+                  <option value="3">Supplier 3</option>
+                  <option value="4">Supplier 4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="name">Date supplied</label>
+                <input type="date" class="form-control" id="date">
+                <span class="note text-secondary">Enter a valid Date.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col text-right">
+              <button type="reset" class="btn btn-outline-dark">Reset</button>
+              <button type="button" class="btn btn-outline-danger">Cancel</button>
+              <button type="submit" class="btn btn-outline-primary">Add Product</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>

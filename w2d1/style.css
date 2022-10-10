@@ -1,0 +1,87 @@
+#page {
+  margin: 0 8px;
+}
+
+.page-header {
+  background-color: #3DAAE8;
+  border-top: 1px solid #4087B0;
+  align-items: center;
+  color: white;
+  display: grid;  
+  grid-template-columns: 40% 15% 15% 30%;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.header-title {
+  font-size: 30px;
+}
+
+.user-infor {
+  text-align: right;
+}
+
+.user-infor .btn {
+  color: #485057;
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.page-contain {
+  color: #485057;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.header-menu {
+  border-left: 1px solid white;
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+}
+
+#login-form {
+  padding: 30px;
+}
+
+#login-form .form-control {
+  height: 50px
+}
+
+.item {
+  display: grid;
+  padding: 10px 0;
+}
+
+#email,
+#pwd {
+  height: 50px;
+}
+
+#pwd {
+
+}
+
+#check-me {
+
+}
+
+#submit {
+
+}
+
+.note {
+  color: #ced4da;
+}
+
+.page-contain .btn {
+  margin-left: 10px;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px 15px;
+}
