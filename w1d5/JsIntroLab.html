@@ -4,93 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>JsIntroLab</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
-
-  <script>
-    // initialize mocha
-    mocha.setup('bdd');
-    // chai has a lot of stuff, let's make assert global
-    let assert = chai.assert;
-
-  </script>
 
 <script>
-    
-  describe("sum", function () {
-    it("Expected output of sum([1,2,3,4]) is 10",
-      function () {
-        assert.equal(10, sum([1, 2, 3, 4]));
-      });
-    it("Expected output of sum() is 0",
-      function () {
-        assert.equal(0, sum());
-      });
-    it("Expected output of sum() is 0",
-      function () {
-        assert.equal(0, sum([]));
-      });
-  });
-
-  describe("multiply", function () {
-    it("Expected output of multiply([1,2,3,4]) is 24",
-      function () {
-        assert.equal(24, multiply([1, 2, 3, 4]));
-      });
-    it("Expected output of multiply([1,2,3,4,0]) is 0 ",
-      function () {
-        assert.equal(0, multiply([1,2,3,4,0]));
-      });
-    it("Expected output of multiply() is 0",
-      function () {
-        assert.equal(0, multiply());
-      });
-    it("Expected output of multiply([]) is 0",
-      function () {
-        assert.equal(0, multiply([]));
-      });
-  });
-
-  describe("reverse", function () {
-    it("Expected output of reverse('jag testar') is 'ratset gaj'",
-      function () {
-        assert.equal('ratset gaj', reverse('jag testar'));
-      });
-    it("Expected output of reverse('narT nauL aB') is 'Ba Luan Tran'",
-      function () {
-        assert.equal('Ba Luan Tran', reverse('narT nauL aB'));
-      });
-
-  });
-
-  describe("filterLongWords", function () {
-    it("Expected output of filterLongWords(null, 3) is []",
-      function () {
-        assert.deepEqual([], filterLongWords(null, 3));
-      });
-    it("Expected output of filterLongWords([], 3) is []",
-      function () {
-        assert.deepEqual([], filterLongWords([], 3));
-      });
-    it("Expected output of filterLongWords('test', 3) is []",
-      function () {
-        assert.deepEqual([], filterLongWords('test', 3));
-      });
-    it("Expected output of filterLongWords(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'], 3) is ['name', 'Luan', 'Tran'], 3)",
-      function () {
-        assert.deepEqual(['name', 'Luan', 'Tran'], filterLongWords(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'], 3));
-      });
-    it("Expected output of filterLongWords(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'], 1)) is ['my', 'name', 'is', 'Ba', 'Luan', 'Tran'] ",
-      function () {
-        assert.deepEqual(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'], filterLongWords(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'], 1));
-      });
-      
-  });
-
-</script>
-
-  <script>
 
     /* runs test to see if expected argument is === to value returned by function2test argument */
     function myFunctionTest(expected, found) {
@@ -228,7 +143,7 @@
 
     console.log("Expected output of reverse('jag testar') is 'ratset gaj'  " + myFunctionTest('ratset gaj', reverse('jag testar')));
 
-    console.log("Expected output of findLongestWord(['qwert', 'asd', 'poiu', 'dfghjjj', 'q']) is 4  " + myFunctionTest(4, findLongestWord(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'])));
+    console.log("Expected output of findLongestWord(['my', 'name', 'is', 'Ba', 'Luan', 'Tran']) is 4  " + myFunctionTest(4, findLongestWord(['my', 'name', 'is', 'Ba', 'Luan', 'Tran'])));
     console.log("Expected output of findLongestWord([]) is 0  " + myFunctionTest(0, findLongestWord([])));
     console.log("Expected output of findLongestWord() is 0  " + myFunctionTest(0, findLongestWord()));
 
@@ -245,10 +160,7 @@
 </head>
 
 <body>
-  <div id="mocha"></div>
-  <script>
-    mocha.run();
-  </script>
+
   Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br />
   Or on Firefox with CTRL_SHIFT_K
 
