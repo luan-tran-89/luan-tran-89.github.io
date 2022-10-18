@@ -1,0 +1,47 @@
+.circle {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.circle:hover {
+  opacity: .4;
+  transition: opacity 1s;
+}
+
+#page-layout {
+  display: flex;
+  align-items: flex-end;
+  min-height: 400px;
+}
+
+#controls {
+  display: grid;
+  grid-auto-columns: 150px;
+  grid-gap: 10px;
+  width: 150px;
+  z-index: 1;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 300px;
+  width: 500px;
+}
+
+#start {
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  width: 100px;
+}
+
+#start:hover {
+  background-color: #0b5ed7;
+  border: 1px solid #0b5ed7;
+}
