@@ -4,8 +4,12 @@ $(function() {
   let interval;
   const content = $("#content");
   const startBtn = $("#start");
-  const circleDiv = '<div class="circle"></div>';
+  const circleDiv = '<div></div>';
   const growthAmount = parseInt($("#growth-amount").val());
+
+  function generateColor() {
+    return '#'+ Math.round(0xffffff * Math.random()).toString(16);
+  }
 
   function generateCircles(numberOfCircles) {
     let width = parseInt($("#width").val());
@@ -15,19 +19,17 @@ $(function() {
       const posx = (Math.random() * contentWidth).toFixed();
       const posy = ((Math.random() * 30) + 100).toFixed();
 
-      const circle = $(circleDiv).css({
-        'background-color': generateColor(),
-        width: `${width}px`,
-        'left': `${posx}px`,
-        'top': `${posy}px`,
-      });
-      
-      circle.appendTo("#content");
+      $(circleDiv, {
+        'class': "circle",
+        'css': {
+          'background-color': generateColor(),
+          'width': `${width}px`,
+          'left': `${posx}px`,
+          'top': `${posy}px`,
+        },
+        'click' : removeCircle
+      }).appendTo("#content");
     }
-  }
-
-  function generateColor() {
-    return '#'+ Math.round(0xffffff * Math.random()).toString(16);
   }
 
   function addAnimateCircle(width) {
@@ -43,11 +45,8 @@ $(function() {
     });
   }
 
-  $("#page-layout").on("click", function(e) {
-    const target = e.target;
-    if (target.className.includes('circle')) {
-      target.remove();
-
+  function removeCircle(e) {
+      $(this).remove();
       if (content.html() == '') {
         startBtn.text("Start");
         clearInterval(interval);
@@ -56,8 +55,7 @@ $(function() {
         }
         isStarted = false;
       }
-    }
-  });
+  }
 
   startBtn.on("click", function(e) {
     let width = parseInt($("#width").val());
