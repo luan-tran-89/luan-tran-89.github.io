@@ -41,10 +41,13 @@ $(function () {
 
   startBtn.click(function() {
     reset();
+    if (isStarted) {
+      changeStatus("&nbsp;");
+    }
   });
 
   function reset() {
-    status.text("Click the \"S\" to begin.");
+    changeStatus("Click the \"S\" to begin.");
     isStarted = !isStarted;
     isLost = false;
     boundaryEls.removeClass("youlose");
@@ -52,14 +55,18 @@ $(function () {
 
   function win() {
     // alert("You win! :]");
-    status.text("You win! :]");
+    changeStatus("You win! :]");
     isStarted = !isStarted;
   }
 
   function lost() {
     // setTimeout(() => {alert("Sorry, you lost! :[")}, 100);
-    status.text("Sorry, you lost! :[");
+    changeStatus("Sorry, you lost! :[");
     isStarted = !isStarted;
     isLost = true;
+  }
+
+  function changeStatus(value) {
+    status.html(value);
   }
 });
