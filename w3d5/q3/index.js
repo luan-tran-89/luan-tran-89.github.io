@@ -9,7 +9,7 @@ app.use('/css', express.static(path.join(__dirname, 'css')));
 
 const date = new Date();
 const hour = date.getHours();
-const isDay = hour > 6 && hour < 16;
+const isDay = hour > 6 && hour < 18;
 
 app.get('/', (req, res) => {
   res.send(`
