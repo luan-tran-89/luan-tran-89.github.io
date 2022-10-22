@@ -1,0 +1,82 @@
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.item {
+  align-items: center;
+  border: 1px solid gray;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 10% auto 10% 135px;
+}
+
+.item.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.item  .item-details {
+  text-align: unset;
+}
+
+.item div {
+  border-right: 1px solid gray;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.quantity {
+  height: 20px;
+  width: 50px;
+}
+
+.item-action {
+  align-items: center;
+  display: flex;
+}
+
+.empty {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-group {
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  background: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.back-btn {
+  background: #6c757d;
+  border: 1px solid #6c757d;
+  
+}
+
+.total {
+  border: 1px solid gray;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  justify-content: end;
+  padding: 10px;
+}
+
+.total span:nth-child(2n) {
+  text-align: right;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+
+    <link href="/images/shop.jpeg" type="image/jpeg" rel="shortcut icon">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1><%= pageTitle %></h1>
+      <form id='my-cart' method="POST" action="/checkout">
+        <div class="item title">
+          <div class="item-name">Name</div>
+            <div class="item-details">Details</div>
+            <div class="item-price">Price</div>
+            <div>Quantity</div>
+        </div>
+        <% if (Object.keys(products).length === 0) { %>
+          <div class="empty">Empty cart</div>
+        <% } else { %>
+          <% Object.values(products).forEach((product) => { %>
+            <div class="item">
+              <div class="item-name"><%= product.name %></div>
+              <div class="item-details"><%= product.details %></div>
+              <div class="item-price">$<%= product.price * product.quantity %></div>
+              <div class="item-quantity"><%= product.quantity %></div>
+            </div>
+          <% }) %>
+          <div class="total">
+            <span>Total price: </span>
+            <span>$<%= totalPrice %></span>
+            <span>Taxes:</span>
+            <span>$<%= tax %></span>
+            <span>Final price:</span>
+            <span>$<%= totalPrice + tax %> </span>
+
+            <!-- Total price: $<%= totalPrice %><br>
+            Taxes: $<%= tax %><br>
+            Final price: $<%= totalPrice + tax %>  -->
+          </div>
+        <% } %>
+        <div class="btn-group">
+          <input class="btn" type="submit" value="Checkout" />
+          <a class="btn back-btn" href="/">Back To Shop</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
