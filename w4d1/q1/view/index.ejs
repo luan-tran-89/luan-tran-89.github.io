@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>W4D1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <form id="myForm" method="POST" action="/">
+      <label for="key">Key</label>
+      <input type="text" name="key" id="key" placeholder="Please enter a key" />
+      <label for="value">Value</label>
+      <input type="text" name="value" id="value" placeholder="Please enter a value" />
+      <input type="submit" value="Submit Cookie"/>
+    </form>
+    <h1>List of Cookies</h1>
+    <div class="item title">
+      <div class="item-name">Cookie Key</div>
+      <div class="item-value">Cookie Value</div>
+    </div>
+      <% Object.keys(data).forEach((key) => { %>
+        <div class="item">
+          <div class="item-name"><%= key %></div>
+          <div class="item-value"><%= data[key] %></div>
+        </div>
+      <% }) %>
+  </body>
+</html>
