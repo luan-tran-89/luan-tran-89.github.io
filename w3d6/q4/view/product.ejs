@@ -1,11 +1,48 @@
-<form id='<%= product.name %>' method="POST" action="/addToCart">
-  <input type="hidden" id="name" name="name" value="<%= product.name %>">
-  <div class="item">
-    <div class="item-name"><%= product.name %></div>
-    <div class="item-details"><%= product.details %></div>
-    <div class="item-price">$<%= product.price %></div>
-    <div class="item-action">
-      <input class="btn" type="submit" value="Add to Cart" />
-    </div>
-  </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      <%= title %>
+    </title>
+
+    <link href="/images/shop.jpeg" type="image/jpeg" rel="shortcut icon">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+
+  </head>
+  <body>
+    <main>
+      <h1><%= pageTitle %></h1>
+      <div class="item title">
+        <div class="item-name">Name</div>
+        <div class="item-name">Image</div>
+        <div class="item-details">Product Details</div>
+        <div class="item-price">Price</div>
+        <div></div>
+      </div>
+      <form id='product' method="POST" action="/addToCart">
+        <input type="hidden" id="name" name="name" value="<%= product.name %>">
+        <div class="item">
+          <div class="item-name">
+            <span><%= product.name %></span>
+          </div>
+          <div class="item-name">
+            <img src="/images/<%= product.name.toLowerCase() %>.jpeg" alt="<%= product.name %>">
+          </div>
+          <div class="item-details">
+            <%= product.details %>
+          </div>
+          <div class="item-price">$<%= product.price %>
+          </div>
+          <div class="item-action">
+            <input class="btn" type="submit" value="Add to Cart" />
+          </div>
+        </div>
+      </form>
+      <div class="btn-group">
+        <a href="/cart" class="btn">View Cart</a>
+        <a class="btn back-btn" href="/">Back To Shop</a>
+      </div>
+    </main>
+  </body>
+</html>

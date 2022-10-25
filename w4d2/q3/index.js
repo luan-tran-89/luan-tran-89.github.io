@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const app = express();
 
@@ -7,8 +8,12 @@ app.set('views', path.join(__dirname, "view"));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
-
-
+app.use('/js', express.static(path.join(__dirname, 'view', 'js')));
+app.use(session({
+  resave: false,
+  saveUninitialized: false,
+  secret: 'my secret'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -33,13 +38,25 @@ const products = [
   }
 ];
 
-const myCart = {};
+app.use((req, res, next) => {
+  if (!req.session.myCart) {
+      req.session.myCart = {};
+  }
+  next();
+});
+
+function getNumberOfItems(myCart) {
+  return Object.values(myCart).reduce((a, b) => {
+    return a + b.quantity;
+  }, 0);
+}
 
 app.get('/', (req, res) => {
   res.render(`shop`, {
     title: "KEN SHOP",
     pageTitle: "Welcome to the Ken shop!",
-    products: products
+    products: products,
+    count: getNumberOfItems(req.session.myCart)
   });
 });
 
@@ -48,29 +65,37 @@ app.get('/product/:name', (req, res) => {
   res.render(`product`, {
     title: "KEN SHOP",
     pageTitle: "Product Details",
-    product: selectedProduct
+    product: selectedProduct,
+    count: getNumberOfItems(req.session.myCart)
   });
 });
 
 app.post('/addToCart', (req, res) => {
   const name = req.body.name;
   const selectedProduct = products.find(p => p.name === name);
+  const myCart = req.session.myCart || {};
+
   const item = myCart[name];
 
   if (item) {
     item.quantity += 1;
   } else {
-    myCart[name] = {
+     myCart[name] = {
       ...selectedProduct,
       quantity: 1
     };
+
+    req.session.myCart = myCart;
   }
-  res.redirect(req.get('referer'));
+
+  res.json({data: getNumberOfItems(req.session.myCart)});
+  res.status(200);
+  res.end();
 });
 
 app.get('/cart', (req, res) => {
+  const myCart = req.session.myCart || {};
   const totalPrice = Object.values(myCart).reduce((a, b) => a + (b.price * b.quantity), 0);
-
   res.render(`shoppingcart`, {
     title: "KEN SHOP",
     pageTitle: "Your Cart:",

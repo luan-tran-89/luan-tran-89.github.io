@@ -13,9 +13,10 @@
       <form id='my-cart' method="POST" action="/checkout">
         <div class="item title">
           <div class="item-name">Name</div>
-            <div class="item-details">Details</div>
-            <div class="item-price">Price</div>
-            <div>Quantity</div>
+          <div class="item-name">Image</div>
+          <div class="item-details">Details</div>
+          <div class="item-price">Price</div>
+          <div>Quantity</div>
         </div>
         <% if (Object.keys(products).length === 0) { %>
           <div class="empty">Empty cart</div>
@@ -23,6 +24,9 @@
           <% Object.values(products).forEach((product) => { %>
             <div class="item">
               <div class="item-name"><%= product.name %></div>
+              <div class="item-name">
+                <img src="/images/<%= product.name.toLowerCase() %>.jpeg" alt="<%= product.name %>">
+              </div>
               <div class="item-details"><%= product.details %></div>
               <div class="item-price">$<%= product.price * product.quantity %></div>
               <div class="item-quantity"><%= product.quantity %></div>

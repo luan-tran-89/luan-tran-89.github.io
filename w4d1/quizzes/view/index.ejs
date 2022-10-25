@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quizzes W4D1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div>List of values: <%= data.length == 0 ? 'The list is empty' : '' %></div>
+    <ul>
+      <% data.forEach((value) => { %>
+        <li><%= value %></li>
+      <% }) %>
+    </ul>
+    <a href="/add">Add Value</a>
+  </body>
+</html>

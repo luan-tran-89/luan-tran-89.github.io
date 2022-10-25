@@ -7,17 +7,26 @@
     <link href="/images/shop.jpeg" type="image/jpeg" rel="shortcut icon">
     <link href="/css/style.css" type="text/css" rel="stylesheet">
   </head>
-  <body>
+  <body id="shop">
     <main>
       <h1><%= pageTitle %></h1>
       <div class="item title">
         <div class="item-name">Name</div>
-          <div class="item-details">Details</div>
-          <div class="item-price">Price</div>
-          <div>Quantity</div>
+        <div class="item-name">Image</div>
+        <div class="item-price">Price</div>
+        <div>Action</div>
       </div>
       <% products.forEach((product) => { %>
-        <%- include('product', {product: product}); %>
+        <div class="item">
+          <div class="item-name"><%= product.name %></div>
+          <div class="item-name">
+            <img src="/images/<%= product.name.toLowerCase() %>.jpeg" alt="<%= product.name %>">
+          </div>
+          <div class="item-price">$<%= product.price %></div>
+          <div class="item-action">
+            <a href="/product/<%= product.name %>" class="btn">View</a>
+          </div>
+        </div>
       <% }) %>
       <div class="btn-group">
         <a href="/cart" class="btn">View Cart</a>

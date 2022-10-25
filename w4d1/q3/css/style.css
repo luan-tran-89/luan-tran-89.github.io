@@ -11,8 +11,16 @@ body a {
   align-items: center;
   border: 1px solid gray;
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 10% auto 10% 135px;
+  grid-template-columns: 10% 160px auto 10% 135px;
+}
+
+#shop .item {
+  grid-template-columns: 160px 160px 100px 100px;
+  width: 519px;
+}
+
+#shop .btn-group {
+  width: 519px;
 }
 
 .item.title {
@@ -20,16 +28,18 @@ body a {
   text-align: center;
 }
 
-.item  .item-details {
-  text-align: unset;
+.item .item-details {
+  justify-content: unset;
 }
 
 .item div {
+  align-items: center;
+  display: flex;
   border-right: 1px solid gray;
+  justify-content: center;
   padding: 10px;
   height: 100%;
   box-sizing: border-box;
-  text-align: center;
 }
 
 .quantity {
@@ -79,4 +89,9 @@ body a {
 
 .total span:nth-child(2n) {
   text-align: right;
+}
+
+.item img {
+  height: 140px;
+  width: 140px;
 }

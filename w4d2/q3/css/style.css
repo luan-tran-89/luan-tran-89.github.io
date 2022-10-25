@@ -11,6 +11,7 @@ body a {
   align-items: center;
   border: 1px solid gray;
   display: grid;
+  margin: auto;
   grid-template-columns: 10% 160px auto 10% 135px;
 }
 
@@ -94,4 +95,35 @@ body a {
 .item img {
   height: 140px;
   width: 140px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart {
+  background: url('/images/cart.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+#count {
+  background: red;
+  border-radius: 50%;
+  color: white;
+  padding: 4px;
+  position: absolute;
+  left: 60%;
+  bottom: 70%;
+  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  text-align: center;
 }
